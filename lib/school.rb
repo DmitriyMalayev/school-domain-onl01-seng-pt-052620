@@ -1,8 +1,4 @@
 class School
-    # attr_accessor :name 
-    # attr_reader :grade, :sort
-
-
     def initialize(name)
         @name = name 
         @roster = {} 
@@ -10,18 +6,11 @@ class School
 
      def add_student(name, grade)
         if @roster[grade] 
-            @roster[grade] = [name]
-        else 
-            @roster  
-        end       
-     end 
+            @roster[grade] << name 
+        else
+            @roster[grade] = [name] 
+        end 
+        @roster
+    end 
 
-     def roster 
-        @roster 
-     end 
 end 
-
-# new_hash = {} 
-# new_hash{:roster => 1} 
-
-# Hash.ne
